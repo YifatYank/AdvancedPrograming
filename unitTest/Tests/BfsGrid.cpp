@@ -28,6 +28,8 @@ list<pPoint> * BfsGrid::getShortestPath(Grid * grid, Point * start, Point * end)
     // While the queue is not empty
     while(!que->empty()) {
         currNode = que->front();
+        // Set the node as marked.
+        grid->setObstical(currNode->getData()->getX(),currNode->getData()->getY());
         que->pop();
 
         // If we have rached the end point
@@ -51,12 +53,12 @@ list<pPoint> * BfsGrid::getShortestPath(Grid * grid, Point * start, Point * end)
             delete(tempPoint);
 
             // If the value was not checked allready.
-            if(!BfsGrid::isFound(chekedData, (Point *)newNode->getData())) {
+            //if(!BfsGrid::isFound(chekedData, (Point *)newNode->getData())) {
                 newNode->setNext(currNode);
                 que->push(newNode);
-            } else {
-                delete(newNode);
-            }
+            //} else {
+            //    delete(newNode);
+            //}
         }
         delete(lstNeibors);
 

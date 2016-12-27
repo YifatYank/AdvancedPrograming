@@ -15,11 +15,21 @@ private:
     int height;
     int width;
     GridNode *** grideWorld;
+    GridNode *** tempGride;
     /* initiateGrid.
     * <p>
     * initiates grid's cells.
     */
     void initiateGrid();
+    /** createTempGrid
+     * Creates a copy of the gridWorld.
+     *
+     */
+    void createTempGrid();
+    /** deleteTempGrid
+     * Deletes the copy of the gridWolrd.
+     */
+    void deleteTempGrid();
 
 public:
     /**
@@ -92,6 +102,5 @@ public:
     */
     list <Point *> * getSortesrPath(Point * start, Point * end);
 };
-
 
 #endif //UNITTEST_GRID_H

@@ -16,8 +16,8 @@ using namespace std;
 
 list<pstring> * split(string * str,char ch);
 int stringToInt(string str);
-
-int main(int argc, char* argv[]) {
+/*
+int main1(int argc, char* argv[]) {
     int task;// = 0;
     int id;
     int index;
@@ -172,3 +172,4 @@ int stringToInt(string str){
     }
     return num;
 }
+*/

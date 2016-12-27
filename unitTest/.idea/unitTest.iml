@@ -10,57 +10,57 @@
       <sourceFolder url="file://$MODULE_DIR$/lib/googletest-master/googletest/src/gtest-all.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lib/googletest-master/googletest/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lib/googletest-master/googletest/cmake/internal_utils.cmake" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/GridNode.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Definitions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/BfsGrid.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/BfsGrid.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Grid.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Luxury.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Driver.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Point.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Enums.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Standart.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Luxury.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/oldmain.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Cab.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Grid.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Point.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/GridTest.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/GridNode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/TaxiCenter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Point.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Passenger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/PointNode.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Cab.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/TripTest.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/TaxiCenterTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/DriverTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Trip.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/CabTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/PassengerTest.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/GridNodeTest.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Driver.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Driver.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/PointTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Passenger.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Trip.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/PointNodeTest.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Luxury.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/Driver.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/PointNode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Definitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Standart.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/GridNodeTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/TaxiCenter.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/GridNode.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Luxury.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/PointNode.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/TaxiCenter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/GridTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Standart.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
+          <root url="file:///usr/include" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
-          <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
         </CLASSES>
         <SOURCES>
+          <root url="file:///usr/include" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
-          <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
         </SOURCES>
       </library>
