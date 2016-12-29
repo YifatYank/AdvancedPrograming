@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/lib/googletest-master/googletest/src/gtest-all.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lib/googletest-master/googletest/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lib/googletest-master/googletest/cmake/internal_utils.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/mainSrialization.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/BfsGrid.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/BfsGrid.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Grid.h" isTestSource="false" />
@@ -20,7 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Tests/Cab.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Grid.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/GridNode.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/TaxiCenter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/GridTest.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Point.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Passenger.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/PointNode.h" isTestSource="false" />
@@ -44,7 +45,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Tests/Luxury.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/PointNode.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Tests/GridTest.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/TaxiCenter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tests/Standart.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>

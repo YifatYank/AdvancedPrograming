@@ -14,8 +14,8 @@ using namespace std;
 class Driver {
     // The driver is not responsible to the passanger and cab it holds.
 private:
-    int age;
     int id;
+    int age;
     int years_of_experience;
     int average_satisfaction;
     int num_of_customers;
@@ -23,10 +23,25 @@ private:
     Marital_Status marital_status;
     bool hasCm;
     Cab * cab;
-    Passenger * passenger;
-    Grid * roads;
 
 public:
+    friend class boost::serialization::access;
+
+    template<class Archive>
+    void serialize(Archive &ar, const unsigned int version)
+    {
+        ar & this->id;
+        ar & this->age;
+        ar & this->years_of_experience;
+        ar & this->average_satisfaction;
+        ar & this->num_of_customers;
+        ar & this->sum_of_satisfaction;
+        ar & this->marital_status;
+        ar & this->hasCm;
+        ar & this->cab;
+    }
+
+    Driver (): id(0) , age(0), marital_status(married) , years_of_experience(0) {}
     /**
  * Driver
  *constructor
@@ -35,7 +50,7 @@ public:
  * @param id id
  * @param status marital status
 */
-    Driver (int id, int age, Marital_Status status, int exp, Grid * grid);
+    Driver (int id, int age, Marital_Status status, int exp);
     /**
  * Driver
  *destructor

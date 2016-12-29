@@ -1,7 +1,7 @@
 //
 // Created by yifat on 27/12/16.
 //
-
+/**
 #include <iostream>
 #include <string>
 #include "Point.h"
@@ -146,4 +146,4 @@ int stringToInt(string str){
         num = num * 10 + digit;
     }
     return num;
-}
+}*/

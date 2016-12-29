@@ -5,6 +5,29 @@
 #ifndef UNITTEST_TRIP_H
 #define UNITTEST_TRIP_H
 
+#include <string>
+#include <stdlib.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/tokenizer.hpp>
+#include <boost/algorithm/string/predicate.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/assign/list_of.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/iostreams/device/back_inserter.hpp>
+#include <boost/iostreams/stream.hpp>
+#include <boost/archive/binary_oarchive.hpp>
+#include <boost/archive/binary_iarchive.hpp>
+#include <boost/serialization/list.hpp>
+
+using namespace std;
+using namespace boost::archive;
 #include "Point.h"
 #include <list>
 
@@ -13,12 +36,28 @@ class Trip {
 private:
     int id;
     int total_meters_passed;
-    Point * starting_point;
-    Point * ending_point;
     int number_of_passenger;
     int tarrif;
+    Point * starting_point;
+    Point * ending_point;
     list<pPoint>* trip_path;
 public:
+    friend class boost::serialization::access;
+
+    template<class Archive>
+    void serialize(Archive &ar, const unsigned int version)
+    {
+        ar & this->id;
+        ar & this->total_meters_passed;
+        ar & this->number_of_passenger;
+        ar & this->tarrif;
+        ar & this->starting_point;
+        ar & this->ending_point;
+        ar & this->trip_path;
+    }
+
+    Trip() : id(0) , tarrif(0), starting_point(NULL) , ending_point(NULL), number_of_passenger(0) , trip_path(NULL){}
+
     /**
  * Trip
  * constructor
@@ -28,12 +67,16 @@ public:
  * @param numOfPassangers num of passengers
 */
     Trip(int id,int taarif, Point start, Point end, int numOfPassangers);
+
+
+    Trip(int id,int taarif, Point start, Point end, int numOfPassangers, list<pPoint> * path);
+
+
     /**
    * Trip
    * destructor
   */
     ~Trip();
-
     int getID();
     /**
  * getTMP

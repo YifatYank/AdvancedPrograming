@@ -31,7 +31,7 @@ public:
      */
     void SetUp() {
         cab = new Cab(0,HONDA,RED);
-        driver = new Driver(123456, 50, married, 20,this->grid);
+        driver = new Driver(123456, 50, married, 20);
         driver->setCab(cab);
     }
 

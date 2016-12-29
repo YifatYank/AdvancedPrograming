@@ -5,6 +5,25 @@
 #ifndef UNITTEST_CAB_H
 #define UNITTEST_CAB_H
 
+#include <string>
+#include <stdlib.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/tokenizer.hpp>
+#include <boost/algorithm/string/predicate.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/assign/list_of.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/iostreams/device/back_inserter.hpp>
+#include <boost/iostreams/stream.hpp>
+#include <boost/archive/binary_oarchive.hpp>
+#include <boost/archive/binary_iarchive.hpp>
 #include "Grid.h"
 #include "Trip.h"
 #include "Point.h"
@@ -14,14 +33,30 @@ class Cab {
 private:
     int id;
     int kilometers_passed;
-    double taarif;
     int speed;
+    double taarif;
     Manufacturer manufacturer;
     Color color;
     Point * location;
     Trip * trip;
 
 public:
+    friend class boost::serialization::access;
+
+    template<class Archive>
+    void serialize(Archive &ar, const unsigned int version)
+    {
+        ar & this->id;
+        ar & this->kilometers_passed;
+        ar & this->speed;
+        ar & this->taarif;
+        ar & this->manufacturer;
+        ar & this->color;
+        ar & this->location;
+        ar & this->trip;
+    }
+
+    Cab() : id(0) , manufacturer(HONDA), color(RED){}
     /**
  * Cab
  *constructor

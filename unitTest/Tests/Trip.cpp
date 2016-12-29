@@ -4,14 +4,14 @@
 
 #include "Trip.h"
 
-
-Trip::Trip(int id,int taarif, Point  start, Point end, int numOfPassangers) {
+Trip::Trip(int id,int taarif, Point start, Point end, int numOfPassangers) {
     this->id = id;
     this->tarrif = taarif;
     this->starting_point = new Point(start.getX(),start.getY());
     this->ending_point = new Point(end.getX(),end.getY());
     this->number_of_passenger = numOfPassangers;
     this->total_meters_passed = 0;
+    this->trip_path = new list<pPoint>();
 }
 
 Trip::~Trip() {
@@ -57,9 +57,22 @@ list<pPoint> * Trip::getTrip_path(){
 }
 
 void Trip::setTrip_path(list<pPoint> * lst){
-    this->trip_path = lst;
+    if(lst != this->getTrip_path()) {
+        delete(this->trip_path);
+        this->trip_path = lst;
+    }
 }
 
 int Trip::getID() {
     return this->id;
+}
+
+Trip::Trip(int id, int taarif, Point start, Point end, int numOfPassangers, list<pPoint> * path) {
+    this->id = id;
+    this->tarrif = taarif;
+    this->starting_point = new Point(start.getX(),start.getY());
+    this->ending_point = new Point(end.getX(),end.getY());
+    this->number_of_passenger = numOfPassangers;
+    this->total_meters_passed = 0;
+    this->trip_path = path;
 }

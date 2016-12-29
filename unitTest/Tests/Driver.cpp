@@ -2,19 +2,17 @@
 using namespace std;
 
 
-Driver::Driver(int id, int age, Marital_Status status, int exp, Grid * grid) {
+Driver::Driver(int id, int age, Marital_Status status, int exp) {
     this->id = id;
     this->age = age;
     this->marital_status = status;
     this->years_of_experience = exp;
-    this->roads = grid;
 
     this->average_satisfaction = 0;
     this->hasCm = false;
     this->num_of_customers = 0;
     this->sum_of_satisfaction = 0;
 
-    this->passenger = NULL;
     this->cab = NULL;
 }
 
@@ -81,12 +79,6 @@ int Driver::getAvSa(){
 
 void Driver::goToCm(Point place) {
 
-}
-
-
-list <pPoint> *Driver::calculatePath(Point x, Point y) {
-    list <pPoint> * path = this->roads->getSortesrPath(new Point(x.getX(),x.getY()), new Point(y.getX(),y.getY()));
-    return path;
 }
 
 int Driver::getID() {

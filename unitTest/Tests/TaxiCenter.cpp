@@ -15,7 +15,7 @@ TaxiCenter::TaxiCenter(Grid *grid) {
     this->cabs = new list<pCab>;
     this->dummyCab = new Cab(-1, HONDA, RED);
     this->dummtTrip = new Trip (-1,-1, Point(-1,-1) , Point(-1,-1),-1);
-    this->dummyDriver = new Driver (-1, -1, single,-1, NULL);
+    this->dummyDriver = new Driver (-1, -1, single,-1);
 }
 TaxiCenter::~TaxiCenter(){
     this->deleteCabsList();
@@ -83,7 +83,7 @@ void TaxiCenter::addDriver(int id, Marital_Status ms, int age, int yearsOfExp) {
     Driver * driver = this->findDriver(id);
     // If he driver is not exist in the center
     if (driver->getID() == - 1) {
-        driver = new Driver(id, age, ms, yearsOfExp, this->grid);
+        driver = new Driver(id, age, ms, yearsOfExp);
         this->drivers->push_front(driver);
     }
 }
@@ -205,7 +205,7 @@ void TaxiCenter::addDriver(int id, Marital_Status ms, int age, int yearsOfExp, i
     driver = this->findDriver(id);
     // If he driver is not exist in the center
     if (driver->getID() == -1) {
-        driver = new Driver(id, age, ms, yearsOfExp, this->grid);
+        driver = new Driver(id, age, ms, yearsOfExp);
         this->drivers->push_front(driver);
 
         cab = this->findCab(id);
