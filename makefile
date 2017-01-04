@@ -1,87 +1,87 @@
-a.out: server.out client.out
+a.out: Server.out Client.out
 
-# Make the server exe file
-server.out: server/main.o server/BfsGrid.o server/Cab.o server/Driver.o server/Grid.o server/GridNode.o server/Luxury.o server/Passenger.o server/Point.o server/PointNode.o server/TaxiCenter.o server/Standart.o server/Trip.o server/Socket.o server/Udp.o
-	g++ -std=c++0x server/main.o server/BfsGrid.o server/Cab.o server/Driver.o server/Grid.o server/GridNode.o server/Luxury.o server/Passenger.o server/Point.o server/PointNode.o server/TaxiCenter.o server/Standart.o server/Trip.o server/Socket.o server/Udp.o -lboost_serialization -o server.out
+# Make the Server exe file
+Server.out: Server/main.o Server/BfsGrid.o Server/Cab.o Server/Driver.o Server/Grid.o Server/GridNode.o Server/Luxury.o Server/Passenger.o Server/Point.o Server/PointNode.o Server/TaxiCenter.o Server/Standart.o Server/Trip.o Server/Socket.o Server/Udp.o
+	g++ -std=c++0x Server/main.o Server/BfsGrid.o Server/Cab.o Server/Driver.o Server/Grid.o Server/GridNode.o Server/Luxury.o Server/Passenger.o Server/Point.o Server/PointNode.o Server/TaxiCenter.o Server/Standart.o Server/Trip.o Server/Socket.o Server/Udp.o -lboost_serialization -o Server.out
 
-server/main.o: server/main.cpp
-	g++ -std=c++0x -c server/main.cpp -o server/main.o
+Server/main.o: Server/main.cpp
+	g++ -std=c++0x -c Server/main.cpp -o Server/main.o
 
-server/BfsGrid.o: server/BfsGrid.cpp server/BfsGrid.h
-	g++ -std=c++0x -c server/BfsGrid.cpp -o server/BfsGrid.o
+Server/BfsGrid.o: Server/BfsGrid.cpp Server/BfsGrid.h
+	g++ -std=c++0x -c Server/BfsGrid.cpp -o Server/BfsGrid.o
 
-server/Cab.o: server/Cab.cpp server/Cab.h
-	g++ -std=c++0x -c server/Cab.cpp -o server/Cab.o
+Server/Cab.o: Server/Cab.cpp Server/Cab.h
+	g++ -std=c++0x -c Server/Cab.cpp -o Server/Cab.o
 
-server/Driver.o: server/Driver.cpp server/Driver.h
-	g++ -std=c++0x -c server/Driver.cpp -o server/Driver.o
+Server/Driver.o: Server/Driver.cpp Server/Driver.h
+	g++ -std=c++0x -c Server/Driver.cpp -o Server/Driver.o
 
-server/Grid.o: server/Grid.cpp server/Grid.h
-	g++ -std=c++0x -c server/Grid.cpp -o server/Grid.o
+Server/Grid.o: Server/Grid.cpp Server/Grid.h
+	g++ -std=c++0x -c Server/Grid.cpp -o Server/Grid.o
 
-server/GridNode.o: server/GridNode.cpp server/GridNode.h
-	g++ -std=c++0x -c server/GridNode.cpp -o server/GridNode.o
+Server/GridNode.o: Server/GridNode.cpp Server/GridNode.h
+	g++ -std=c++0x -c Server/GridNode.cpp -o Server/GridNode.o
 
-server/Luxury.o: server/Luxury.cpp server/Luxury.h
-	g++ -std=c++0x -c server/Luxury.cpp -o server/Luxury.o
+Server/Luxury.o: Server/Luxury.cpp Server/Luxury.h
+	g++ -std=c++0x -c Server/Luxury.cpp -o Server/Luxury.o
 
-server/Passenger.o: server/Passenger.cpp server/Passenger.h
-	g++ -std=c++0x -c server/Passenger.cpp -o server/Passenger.o
+Server/Passenger.o: Server/Passenger.cpp Server/Passenger.h
+	g++ -std=c++0x -c Server/Passenger.cpp -o Server/Passenger.o
 
-server/PointNode.o: server/PointNode.cpp server/PointNode.h
-	g++ -std=c++0x -c server/PointNode.cpp -o server/PointNode.o
+Server/PointNode.o: Server/PointNode.cpp Server/PointNode.h
+	g++ -std=c++0x -c Server/PointNode.cpp -o Server/PointNode.o
 
-server/Point.o: server/Point.cpp server/Point.h
-	g++ -std=c++0x -c server/Point.cpp -o server/Point.o
+Server/Point.o: Server/Point.cpp Server/Point.h
+	g++ -std=c++0x -c Server/Point.cpp -o Server/Point.o
 
-server/Standart.o: server/Standart.cpp server/Standart.h
-	g++ -std=c++0x -c server/Standart.cpp -o server/Standart.o
+Server/Standart.o: Server/Standart.cpp Server/Standart.h
+	g++ -std=c++0x -c Server/Standart.cpp -o Server/Standart.o
 
-server/TaxiCenter.o: server/TaxiCenter.cpp server/TaxiCenter.h
-	g++ -std=c++0x -c server/TaxiCenter.cpp -o server/TaxiCenter.o
+Server/TaxiCenter.o: Server/TaxiCenter.cpp Server/TaxiCenter.h
+	g++ -std=c++0x -c Server/TaxiCenter.cpp -o Server/TaxiCenter.o
 
-server/Trip.o: server/Trip.cpp server/Trip.h
-	g++ -std=c++0x -c server/Trip.cpp -o server/Trip.o
+Server/Trip.o: Server/Trip.cpp Server/Trip.h
+	g++ -std=c++0x -c Server/Trip.cpp -o Server/Trip.o
 
-server/Udp.o: server/Udp.cpp server/Udp.h
-	g++ -std=c++0x -c server/Udp.cpp -o server/Udp.o
+Server/Udp.o: Server/Udp.cpp Server/Udp.h
+	g++ -std=c++0x -c Server/Udp.cpp -o Server/Udp.o
 
-server/Socket.o: server/Socket.cpp server/Socket.h
-	g++ -std=c++0x -c server/Socket.cpp -o server/Socket.o
+Server/Socket.o: Server/Socket.cpp Server/Socket.h
+	g++ -std=c++0x -c Server/Socket.cpp -o Server/Socket.o
 
-#Make the client exe file
-client.out: client/main.o client/Cab.o client/Driver.o client/Luxury.o client/Passenger.o client/Point.o client/Standart.o client/Trip.o client/Socket.o client/Udp.o
-	g++ -std=c++0x client/main.o client/Cab.o client/Driver.o client/Luxury.o client/Passenger.o client/Point.o client/Standart.o client/Trip.o client/Socket.o client/Udp.o -lboost_serialization -o client.out
+#Make the Client exe file
+Client.out: Client/main.o Client/Cab.o Client/Driver.o Client/Luxury.o Client/Passenger.o Client/Point.o Client/Standart.o Client/Trip.o Client/Socket.o Client/Udp.o
+	g++ -std=c++0x Client/main.o Client/Cab.o Client/Driver.o Client/Luxury.o Client/Passenger.o Client/Point.o Client/Standart.o Client/Trip.o Client/Socket.o Client/Udp.o -lboost_serialization -o Client.out
 
-client/main.o: client/main.cpp
-	g++ -std=c++0x -c client/main.cpp -o client/main.o
+Client/main.o: Client/main.cpp
+	g++ -std=c++0x -c Client/main.cpp -o Client/main.o
 
-client/Cab.o: client/Cab.cpp client/Cab.h
-	g++ -std=c++0x -c client/Cab.cpp -o client/Cab.o 
+Client/Cab.o: Client/Cab.cpp Client/Cab.h
+	g++ -std=c++0x -c Client/Cab.cpp -o Client/Cab.o 
 
-client/Driver.o: client/Driver.cpp client/Driver.h
-	g++ -std=c++0x -c client/Driver.cpp -o client/Driver.o
+Client/Driver.o: Client/Driver.cpp Client/Driver.h
+	g++ -std=c++0x -c Client/Driver.cpp -o Client/Driver.o
 
-client/Luxury.o: client/Luxury.cpp client/Luxury.h
-	g++ -std=c++0x -c client/Luxury.cpp -o client/Luxury.o
+Client/Luxury.o: Client/Luxury.cpp Client/Luxury.h
+	g++ -std=c++0x -c Client/Luxury.cpp -o Client/Luxury.o
 
-client/Passenger.o: client/Passenger.cpp client/Passenger.h
-	g++ -std=c++0x -c client/Passenger.cpp -o client/Passenger.o
+Client/Passenger.o: Client/Passenger.cpp Client/Passenger.h
+	g++ -std=c++0x -c Client/Passenger.cpp -o Client/Passenger.o
 
-client/Point.o: client/Point.cpp client/Point.h
-	g++ -std=c++0x -c client/Point.cpp -o client/Point.o
+Client/Point.o: Client/Point.cpp Client/Point.h
+	g++ -std=c++0x -c Client/Point.cpp -o Client/Point.o
 
-client/Standart.o: client/Standart.cpp client/Standart.h
-	g++ -std=c++0x -c client/Standart.cpp -o client/Standart.o 
+Client/Standart.o: Client/Standart.cpp Client/Standart.h
+	g++ -std=c++0x -c Client/Standart.cpp -o Client/Standart.o 
 
-client/Trip.o: client/Trip.cpp client/Trip.h
-	g++ -std=c++0x -c client/Trip.cpp -o client/Trip.o 
+Client/Trip.o: Client/Trip.cpp Client/Trip.h
+	g++ -std=c++0x -c Client/Trip.cpp -o Client/Trip.o 
 
-client/Udp.o: client/Udp.cpp client/Udp.h
-	g++ -std=c++0x -c client/Udp.cpp -o client/Udp.o
+Client/Udp.o: Client/Udp.cpp Client/Udp.h
+	g++ -std=c++0x -c Client/Udp.cpp -o Client/Udp.o
 
-client/Socket.o: client/Socket.cpp client/Socket.h
-	g++ -std=c++0x -c client/Socket.cpp -o client/Socket.o
+Client/Socket.o: Client/Socket.cpp Client/Socket.h
+	g++ -std=c++0x -c Client/Socket.cpp -o Client/Socket.o
 
 clean:
-	rm -f server/*.o client/*.o server.out client.out
+	rm -f Server/*.o Client/*.o Server.out Client.out
