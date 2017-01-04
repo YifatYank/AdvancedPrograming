@@ -14,10 +14,10 @@
 using namespace std;
 
 
-list <pstring> * split(string * str,char ch);
+list<pstring> * split(string * str,char ch);
 int stringToInt(string str);
 
-int main1(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
     int task;// = 0;
     int id;
     int index;
@@ -76,9 +76,8 @@ int main1(int argc, char* argv[]) {
                 else if (status == 'D') { ms = divorced; }
 
                 center->addDriver(id, ms, age, experience, vehicle_id);
-
-                break;
             }
+                break;
             case 2: {
                 cin >> id >> dummy >> startx >> dummy >> starty >> dummy >> endx >> dummy >> endy >> dummy >> NOP >> dummy >> taarif;
                 Point *start = new Point(startx, starty);
